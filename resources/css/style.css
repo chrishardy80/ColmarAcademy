@@ -123,26 +123,26 @@ header nav span {
 }
 
 @media only screen and (max-width: 1080px) and (min-width: 823px) {
-  h1 {
+  #banner h1 {
     font-size: 35px;
   }
 
-  h2 {
+  #banner h2 {
     font-size: 25px;
   }
 }
 
 @media only screen and (max-width: 823px) and (min-width: 650px) {
-  h1 {
+  #banner h1 {
     font-size: 25px;
   }
 
-  h2 {
+  #banner h2 {
     font-size: 18px;
   }
 
-  #banner .sidebar {
-    max-width: 34%;
+  #banner .container {
+    max-width: 50%;
   }
 
   #banner .container h2 {
@@ -166,6 +166,19 @@ header nav span {
     max-width: 100%;
   }
 
+  #banner .container {
+    max-width: 100%;
+  }
+
+  #banner h1 {
+    font-size: 50px;
+  }
+
+  #banner h2 {
+    font-size: 30px;
+    padding: 32px 0 24px 0;
+  }
+}
 
 
 
