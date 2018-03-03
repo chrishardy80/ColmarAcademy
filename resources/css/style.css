@@ -1,24 +1,78 @@
+@font-face {
+  font-family: 'Work Sans';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Work Sans'), local('WorkSans-Regular'), url(https://fonts.gstatic.com/s/worksans/v3/QGYsz_wNahGAdqQ43Rh_fKDptfpA4Q.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+@font-face {
+  font-family: 'Work Sans';
+  font-style: normal;
+  font-weight: 700;
+  src: local('Work Sans Bold'), local('WorkSans-Bold'), url(https://fonts.gstatic.com/s/worksans/v3/QGYpz_wNahGAdqQ43Rh3x4X8mNhNy_r-Kw.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+/* Universal styling */
+
+body {
+  font-family: "Work Sans";
+  background-color: #fcfdff;
+  color: #414142;
+}
+
+.title {
+  text-align: center;
+}
+
+h1 {
+  font-size: 50px;
+  font-weight: bold;
+}
+
+h2 {
+  font-size: 30px;
+  font-weight: bold;
+}
+
+.maincontent {
+  position: relative;
+  top: 64px;
+}
 /* Header styling */
 
-header {
+header  {
     display: flex;
-    justify-content: space-between;
     align-items: center;
     height: 64px;
     padding: 0 24px;
+    position: fixed;
+    width: 96.5%;
+    z-index: 5;
+    background-color: #fcfdff;
 }
 
-header .logo {
+.logo {
   display: flex;
   align-items: center;
+  flex-grow: 1;
+
 }
 
 .logo img {
   height: 32px;
+  max-width: 100%;
+}
+
+header nav {
+  display: flex;
+  padding: 24px;
 }
 
 header nav span {
   padding-left: 16px;
+  text-align: right;
 }
 
 .logo span span {
@@ -29,25 +83,299 @@ header nav span {
 
 #banner {
   display: flex;
-  background-color: gray;
+  background-color: #dbdcdd;
 }
 
-.bigimage {
+.bannerimage {
   width: 60%;
   padding: 32px 24px;
 }
 
-.bigimage img {
+.bannerimage img {
   max-width: 100%;
-  max-height: 100%;
 }
 
 #banner .container {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-around;
+  max-width: 75%;
+
+}
+
+#banner .container h2 {
+  padding: 32px 0;
+  font-weight: 400;
+}
+
+#banner .sidebar {
+  display: flex;
+  align-items: center;
+  max-width: 38.75%;
 }
 
 #banner .container .start {
   text-align: center;
+  background-color: #414142;
+  padding: 8px 0;
+  color: #fcfdff;
+  margin-top: 20px;
+}
+
+@media only screen and (max-width: 1080px) and (min-width: 823px) {
+  h1 {
+    font-size: 35px;
+  }
+
+  h2 {
+    font-size: 25px;
+  }
+}
+
+@media only screen and (max-width: 823px) and (min-width: 650px) {
+  h1 {
+    font-size: 25px;
+  }
+
+  h2 {
+    font-size: 18px;
+  }
+
+  #banner .sidebar {
+    max-width: 34%;
+  }
+
+  #banner .container h2 {
+    padding: 16px 0;
+  }
+}
+
+@media only screen and (max-width: 650px) {
+
+  #banner {
+    flex-direction: column;
+  }
+
+  .bannerimage {
+    width: 100%;
+    padding: 0;
+  }
+
+  #banner .sidebar {
+    padding: 32px 16px;
+    max-width: 100%;
+  }
+
+
+
+
+/* Information styling */
+
+#information {
+  display: flex;
+  background-color: #fcfdff;
+}
+
+#information .content {
+  display: flex;
+  flex-direction: column;
+  width: 60%;
+  padding: 32px 24px;
+}
+
+#information .content img {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+#information .content .textcontainer h1 {
+  padding: 32px 0 24px 0;
+}
+
+#information .content .textcontainer span {
+  padding-top: 24px;
+}
+
+.orientation,
+.campus,
+.lecture {
+  display: flex;
+}
+
+.orientation h2,
+.campus h2,
+.lecture h2 {
+  padding-bottom: 8px;
+}
+
+.orientation .read,
+.campus .read,
+.lecture .read {
+  padding-top: 8px;
+  color: blue;
+}
+
+.orientation {
+  border-bottom: 4px double #dbdcdd;
+}
+
+.lecture {
+  background-color: #dbdcdd;
+}
+
+#information .textcontainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+#information .imagecontainer {
+  width: 35%;
+  padding: 16px;
+}
+
+#information .imagecontainer img {
+  width: 100%;
+}
+
+#information .sidebar {
+  padding: 16px 0;
+  width: 40%;
+  border-left: 1px solid #dbdcdd;
+
+}
+
+/* Course styling */
+
+#course {
+  display: flex;
+  flex-direction: column;
+  padding: 32px 56px;
+  background-color: #e8e8e8;
+
+}
+
+#course .content {
+  display: flex;
+}
+
+.column{
+  display: flex;
+  flex-direction: column;
+}
+
+.coursecontainer {
+  display: flex;
+  flex-direction: column;
+  padding: 32px 16px;
+}
+
+.coursecontainer .imagecontainer {
+  display: flex;
+}
+
+.coursecontainer .textcontainer{
+  display: flex;
+  flex-direction: column;
+  background-color: #fcfdff;
+}
+.coursecontainer .textcontainer.long {
+  padding: 16px 16px 24px 16px;
+}
+
+.coursecontainer .textcontainer.short {
+  padding: 16px 16px 40px 16px;
+}
+
+.coursecontainer .textcontainer .courses {
+  padding: 8px 0;
+}
+
+#course img {
+  height: auto;
+  max-width: 100%;
+}
+
+/* Thesis styling */
+
+#thesis {
+  display: flex;
+  flex-direction: column;
+  background-color: #f4f4f4;
+}
+
+#thesis .title {
+  padding: 32px 0;
+}
+
+#thesis .content {
+  display: flex;
+}
+
+.vid {
+  width: 60%;
+  padding: 0 24px 24px 24px;
+}
+
+video {
+  max-width: 100%;
+}
+
+.vid .textcontainer h2{
+  padding-bottom: 8px;
+}
+
+#thesis .sidebar {
+  width: 40%;
+}
+
+#thesis .imagecontainer {
+  width: 35%;
+  padding-right: 16px;
+}
+
+#thesis .imagecontainer img {
+  width: 100%;
+
+}
+
+.element{
+  display: flex;
+  padding: 16px;
+}
+
+.element.top {
+  background-color: #dbdcdd;
+}
+
+#thesis .sidebar .textcontainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  max-width: 60%;
+}
+
+#thesis .sidebar .textcontainer h2 {
+  padding-bottom: 8px;
+}
+
+#thesis .content .textcontainer {
+  display: flex;
+  flex-direction: column;
+  padding: 24px 0 32px 0;
+}
+
+
+
+/* Footer styling */
+
+footer {
+  display: flex;
+  justify-content: space-between;
+  padding: 16px 24px;
+  border-top: 1px solid gray;
+}
+
+footer nav span {
+  padding-left: 8px;
 }
