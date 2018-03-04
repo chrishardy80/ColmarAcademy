@@ -75,8 +75,33 @@ header nav span {
   text-align: right;
 }
 
+header nav .mobile {
+  display: none;
+}
+
 .logo span span {
   color: gray;
+}
+
+@media only screen and (max-width: 750px) {
+
+  header .logo {
+    display: none;
+  }
+
+  header nav span{
+    display: none;
+  }
+
+  header nav .mobile {
+    display: flex;
+  }
+
+  header nav {
+    justify-content: space-between;
+    width: 100%;
+  }
+
 }
 
 /* Banner styling */
@@ -150,7 +175,7 @@ header nav span {
   }
 }
 
-@media only screen and (max-width: 650px) {
+@media only screen and (max-width: 750px) {
 
   #banner {
     flex-direction: column;
@@ -178,9 +203,11 @@ header nav span {
     font-size: 30px;
     padding: 32px 0 24px 0;
   }
+
+  #banner .container .start {
+    background-color: #9c9d9e;
+  }
 }
-
-
 
 /* Information styling */
 
@@ -247,6 +274,10 @@ header nav span {
   padding: 16px;
 }
 
+#information .imagecontainermob {
+  display: none;
+}
+
 #information .imagecontainer img {
   width: 100%;
 }
@@ -258,6 +289,45 @@ header nav span {
 
 }
 
+@media only screen and (max-width: 750px) {
+
+  #information {
+    padding: 16px 16px 32px 16px;
+  }
+
+  #information .content {
+    display: none;
+  }
+
+  .orientation,
+  .campus,
+  .lecture {
+    flex-direction: column;
+    border: none;
+    background-color: #fcfdff;
+  }
+
+  #information .sidebar {
+    width: 100%;
+    border: none;
+  }
+
+  #information .imagecontainer {
+    display: none;
+  }
+
+  #information .imagecontainermob{
+    display: flex;
+  }
+
+  #information .imagecontainermob img{
+    max-width: 100%;
+  }
+
+  #information .textcontainer {
+    padding: 64px 16px;
+  }
+}
 /* Course styling */
 
 #course {
@@ -265,11 +335,14 @@ header nav span {
   flex-direction: column;
   padding: 32px 56px;
   background-color: #e8e8e8;
-
 }
 
 #course .content {
   display: flex;
+}
+
+#course .mobile {
+  display: none;
 }
 
 .column{
@@ -309,6 +382,29 @@ header nav span {
   max-width: 100%;
 }
 
+@media only screen and (max-width: 750px) {
+
+  #course {
+    padding: 32px 16px;
+    background-color: #f4f4f4;
+    border: 1px solid #dbdcdd;
+    margin: 0 1px;
+  }
+  #course .content {
+    display: none;
+  }
+
+  #course .mobile {
+    display: flex;
+    flex-direction: column;
+  }
+
+  #course .mobile .courseselector {
+    padding: 16px 16px 24px 16px;
+    background-color: #dbdcdd;
+    margin: 8px 0;
+  }
+}
 /* Thesis styling */
 
 #thesis {
@@ -378,7 +474,24 @@ video {
   padding: 24px 0 32px 0;
 }
 
+@media only screen and (max-width: 750px) {
 
+  #thesis {
+    background-color: #fcfdff;
+  }
+
+  #thesis .sidebar {
+    display: none;
+  }
+
+   #thesis .vid .textcontainer {
+    display: none;
+  }
+
+  .vid {
+    width: 100%;
+  }
+}
 
 /* Footer styling */
 
@@ -391,4 +504,14 @@ footer {
 
 footer nav span {
   padding-left: 8px;
+}
+
+@media only screen and (max-width: 750px) {
+
+  footer {
+    border: none;
+  }
+  footer nav {
+    display: none;
+  }
 }
