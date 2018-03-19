@@ -4,6 +4,7 @@
     <meta charset="utf-8">
     <title>Colmar Academy</title>
     <link href="./resources/css/reset.css" type="text/css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link href="./resources/css/style.css" type="text/css" rel="stylesheet">
     <link rel="icon" href="./favicon.ico" type="image/x-icon">
   </head>
@@ -14,22 +15,32 @@
     <header>
 
       <div class="logo">
-        <img src="./resources/images/ic-logo.svg"/>
+        <img src="./resources/images/ic-logo.svg" alt="Colmar Academy logo"/>
         <span>COLMAR<span>ACADEMY</span></span>
       </div>
 
       <nav>
-        <span><a>On campus</a></span>
-        <span><a>Online</a></span>
-        <span><a>For companies</a></span>
-        <span><a>Sign in</a></span>
-        <a class="mobile"><img src="./resources/images/ic-logo.svg"/></a>
-        <a class="mobile"><img src="./resources/images/ic-on-campus.svg"/></a>
-        <a class="mobile"><img src="./resources/images/ic-online.svg"/></a>
-        <a class="mobile"><img src="./resources/images/ic-login.svg"/></a>
+        <span><a href="#">On campus</a></span>
+        <span><a href="#">Online</a></span>
+        <span><a href="#">For companies</a></span>
+        <span><a href="#">Sign in</a></span>
+        <a href="#" class="mobile"><img src="./resources/images/ic-logo.svg"/></a>
+        <a href="#" class="mobile"><img src="./resources/images/ic-on-campus.svg"/></a>
+        <a href="#" class="mobile"><img src="./resources/images/ic-online.svg"/></a>
+        <a href="#" class="mobile"><img src="./resources/images/ic-login.svg"/></a>
       </nav>
 
     </header>
+
+    <!-- Social media section -->
+
+    <div id="social">
+      <div class="icons">
+        <i class="fa fa-facebook-square fa-lg"></i>
+        <i class="fa fa-twitter-square fa-lg"></i>
+        <i class="fa fa-instagram fa-lg"></i>
+      </div>
+    </div>
 
     <div class="maincontent">
 
@@ -38,14 +49,14 @@
       <div id="banner">
 
         <div class="bannerimage">
-          <img src="./resources/images/banner.jpg"/>
+          <img src="./resources/images/banner.jpg" alt="Aerial view of three students studying at a bench"/>
         </div>
         <div class="sidebar">
-          <div class="container">
+          <div class="container" role="presentation">
             <h1>Learn something new everyday</h1>
             <h2>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h2>
             <div class="start">
-              <span>Start here</span>
+              <span aria-label="start button">Start here</span>
             </div>
           </div>
         </div>
@@ -55,9 +66,9 @@
 
       <div id="information">
 
-        <div class="content">
+        <div class="content" role="presentation">
           <div class="infoimage">
-            <img src="./resources/images/information-main.jpg">
+            <img src="./resources/images/information-main.jpg" alt="student reading in the park">
           </div>
           <div class="textcontainer">
             <h1>It doesn't hurt to keep practicing</h1>
@@ -68,47 +79,48 @@
             <span>Emanuel, Sr Strategist at Hiring.com</span>
           </div>
         </div>
+
         <div class="sidebar">
 
           <div class="orientation">
             <div class="imagecontainer">
-              <img src="./resources/images/information-orientation.jpg">
+              <img src="./resources/images/information-orientation.jpg" alt="aerial view of students walking on a path">
             </div>
             <div class="imagecontainermob">
               <img src="./resources/images/information-orientation-mobile.jpg">
             </div>
             <div class="textcontainer">
               <h2>Orientation date</h2>
-              <span>Tue 10/11 & Wed 10/12: 8am-3pm</span>
-              <span class="read"><a>Read more</a></span>
+              <span class="moreinfo" aria-label="orientation dates">Tue 10/11 & Wed 10/12: 8am-3pm</span>
+              <span class="read" aria-label="click to read more about orientation"><a href="#">Read more</a></span>
             </div>
           </div>
 
           <div class="campus">
             <div class="imagecontainer">
-              <img src="./resources/images/information-campus.jpg"/>
+              <img src="./resources/images/information-campus.jpg" alt="An image showing a study area on campus"/>
             </div>
             <div class="imagecontainermob">
               <img src="./resources/images/information-campus-mobile.jpg"/>
             </div>
             <div class="textcontainer">
               <h2>Our campus</h2>
-              <span>Find which campus is close by you</span>
-              <span class="read"><a>Read more</a></span>
+              <span class="moreinfo">Find which campus is close by you</span>
+              <span class="read" aria-label="click to read more about our campuses"><a href="#">Read more</a></span>
             </div>
           </div>
 
           <div class="lecture">
             <div class="imagecontainer">
-              <img src="./resources/images/information-guest-lecture.jpg"/>
+              <img src="./resources/images/information-guest-lecture.jpg" alt="Guest lecturer, Oliver Sack"/>
             </div>
             <div class="imagecontainermob">
               <img src="./resources/images/information-guest-lecture-mobile.jpg"/>
             </div>
             <div class="textcontainer">
               <h2>Our guest lecture</h2>
-              <span class= "breakone">Join a keynote with Oliver Sack about music in medical treatment</span>
-              <span class="read"><a>Read more</a></span>
+              <span class= "moreinfo">Join a keynote with Oliver Sack about music in medical treatment</span>
+              <span class="read" aria-label="click to read more about our guest lecture"><a href="#">Read more</a></span>
             </div>
           </div>
 
@@ -126,75 +138,71 @@
 
         <div class="content">
 
-          <div class="coursefinder top">
+          <div class="coursefinder" role="presentation">
 
-            <div class="coursecontainer">
-              <div class="imagecontainer">
-                <img src="./resources/images/course-software.jpg"/>
+            <div class="coursecontainer" aria-label="click to find out more about Software Engineering courses">
+              <div class="imagecontainer big">
+                <img src="./resources/images/course-software.jpg" alt="Two computer monitors on a desk"/>
               </div>
               <div class="textcontainer">
                 <h2>Software engineering</h2>
                 <span class="courses">COURSES</span>
-                <span>Web Development,Mobile Development, iOT,APIs</span>
+                <span aria-label="list of available Software Engineering courses">Web Development,Mobile Development, iOT,APIs</span>
               </div>
             </div>
 
-            <div class="coursecontainer">
+            <div class="coursecontainer" aria label="click to find out more about Computer Art courses">
               <div class="imagecontainer">
-                <img src="./resources/images/course-computer-art.jpg"/>
+                <img src="./resources/images/course-computer-art.jpg" alt="Hand holding a smart phone"/>
               </div>
               <div class="textcontainer">
                 <h2>Computer art</h2>
                 <span class="courses">COURSES</span>
-                <span>Imaging & Design, Web Design, Motion Graphics & Visual Effects, Computer Animation</span>
+                <span aria-label="list of available Computer Art courses">Imaging & Design, Web Design, Motion Graphics & Visual Effects, Computer Animation</span>
               </div>
             </div>
 
-            <div class="coursecontainer">
+            <div class="coursecontainer" aria-label="click to find out more about Design courses">
               <div class="imagecontainer">
-                <img src="./resources/images/course-design.jpg"/>
+                <img src="./resources/images/course-design.jpg" alt="Man using an analogue camera"/>
               </div>
               <div class="textcontainer">
                 <h2>Design</h2>
                 <span class="courses">COURSES</span>
-                <span>User Experience Design, User Research, Visual Design</span>
+                <span aria-label="list of available Design courses">User Experience Design, User Research, Visual Design</span>
               </div>
             </div>
 
-          </div>
-
-          <div class="coursefinder bottom">
-
-            <div class="coursecontainer">
+            <div class="coursecontainer" aria-label="click to find out more about Data courses">
               <div class="imagecontainer">
-                <img src="./resources/images/course-data.jpg"/>
+                <img src="./resources/images/course-data.jpg" alt="Laptop displaying graphs"/>
               </div>
               <div class="textcontainer">
                 <h2>Data</h2>
                 <span class="courses">COURSES</span>
-                <span>Data Science, Big Data, SQL, Data Visualization</span>
+                <span aria-label="List of available Data courses">Data Science, Big Data, SQL, Data Visualization</span>
               </div>
             </div>
 
-            <div class="coursecontainer">
+            <div class="coursecontainer" aria-label="click to find out more about Business courses">
               <div class="imagecontainer">
-                <img src="./resources/images/course-business.jpg"/>
+                <img src="./resources/images/course-business.jpg" alt="Chess board"/>
               </div>
               <div class="textcontainer">
                 <h2>Business</h2>
                 <span class="courses">COURSES</span>
-                <span>Product Development, Business Development, Startup</span>
+                <span aria-label="List of available Business courses">Product Development, Business Development, Startup</span>
               </div>
             </div>
 
-            <div class="coursecontainer">
+            <div class="coursecontainer" aria-label="click to find out more about Marketing courses">
               <div class="imagecontainer">
-                <img src="./resources/images/course-marketing.jpg"/>
+                <img src="./resources/images/course-marketing.jpg" alt="Digital watch"/>
               </div>
               <div class="textcontainer">
                 <h2>Marketing</h2>
                 <span class="courses">COURSES</span>
-                <span>Analytics, Content Marketing, Mobile Marketing</span>
+                <span aria-label="List of available Marketing courses">Analytics, Content Marketing, Mobile Marketing</span>
               </div>
             </div>
 
@@ -220,7 +228,7 @@
             </div>
             <div class="textcontainer">
               <h2>Reimagine urban</h2>
-              <p>"Curabitur vitae libero in ipsum porttitor consequat.
+              <p aria-label="Description of the video">"Curabitur vitae libero in ipsum porttitor consequat.
                   Aliquam et commodo lectus, nec consequat neque. Sed non accumsan urna.
                   Phasellus sed consequat ex. Etiam eget magna laoreet,
                   efficitur dolor consequat, tristique ligula."</p>
@@ -229,9 +237,9 @@
 
           <div class="sidebar">
 
-            <div class="element top">
+            <div class="element top" aria-label="Click to find out more about Fisma, a prototype product">
               <div class="imagecontainer">
-                <img src="./resources/images/thesis-fisma.jpg">
+                <img src="./resources/images/thesis-fisma.jpg" alt="Papers showing design ideas">
               </div>
               <div class="textcontainer">
                 <h2>Fisma: Design and Prototype</h2>
@@ -239,9 +247,9 @@
               </div>
             </div>
 
-            <div class="element bottom">
+            <div class="element bottom" aria-label="Click to find out more about the research study about New York">
               <div class="imagecontainer">
-                <img src="./resources/images/thesis-now-and-then.jpg">
+                <img src="./resources/images/thesis-now-and-then.jpg" alt="New York skyline">
               </div>
               <div class="textcontainer">
                 <h2>Now and then</h2>
@@ -261,8 +269,8 @@
         <span>&copy; 2016 Colmar Academy. All rights reserved</span>
 
         <nav>
-          <span>Terms</span>
-          <span>Privacy</span>
+          <span><a href="#">Terms</a></span>
+          <span><a href="#">Privacy</a></span>
         </nav>
     </div>
   </body>

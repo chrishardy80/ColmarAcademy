@@ -14,12 +14,28 @@
   unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
 }
 
+@font-face {
+  font-family: 'Taviraj';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Taviraj Regular'), local('Taviraj-Regular'), url(https://fonts.gstatic.com/s/taviraj/v3/ahcZv8Cj3ylylTXzTOkrUsNzjUw.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+@font-face {
+  font-family: 'Taviraj';
+  font-style: normal;
+  font-weight: 700;
+  src: local('Taviraj Bold'), local('Taviraj-Bold'), url(https://fonts.gstatic.com/s/taviraj/v3/ahccv8Cj3ylylTXzRFIOR-5RgGa6q0o.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
 /* Universal styling */
 
 body {
-  font-family: "Work Sans";
+  font-family: "Work Sans", sans-serif;
   background-color: #fcfdff;
-  color: #414142;
+  color: #565656;
   font-size: 16px;
 }
 
@@ -37,7 +53,10 @@ h2 {
   font-weight: bold;
 }
 
-
+a {
+  text-decoration: none;
+  color: #565656;
+}
 
 .maincontent {
   position: relative;
@@ -91,6 +110,8 @@ header nav .mobile {
   color: gray;
 }
 
+/* Header mobile styling */
+
 @media only screen and (max-width: 750px) {
 
   header .logo {
@@ -108,20 +129,44 @@ header nav .mobile {
   header nav {
     justify-content: space-between;
     width: 100%;
+    margin-right: 24px;
   }
 
 }
 
+/* social-media styling */
+
+#social {
+  position: fixed;
+  display: flex;
+  z-index: 2;
+  padding: 72px 16px 8px 16px;
+  background-color: #fcfdff;
+  width: 100%;
+  opacity: 0.6;
+}
+
+#social i {
+  padding-left: 16px;
+}
+
+/* social-media mobile styling */
+
+@media only screen and (max-width: 750px) {
+  #social i {
+    padding-left: 32px;
+  }
+}
 /* Banner styling */
 
 #banner {
   display: flex;
-  background-color: #dbdcdd;
+  background-color: #A7B4C1;
 }
 
 .bannerimage {
   width: 60%;
-  padding: 32px 24px;
+  padding: 64px 24px 32px 24px;
 }
 
 .bannerimage img {
@@ -138,6 +183,7 @@ header nav .mobile {
 
 #banner .container h2 {
   padding: 32px 0;
+  font-family: Taviraj, serif;
   font-weight: 400;
 }
 
@@ -149,17 +195,18 @@ header nav .mobile {
 
 #banner .container .start {
   text-align: center;
-  background-color: #414142;
+  background-color: #565656;
   padding: 8px 0;
-  color: #fcfdff;
+  color: #fcfdff !important;
   margin-top: 20px;
   transition: all 400ms ease;
 }
 
 #banner .container .start:hover {
-  background-color: #fcfdff;
-  color: #414142;
+  background-color: #004489;
 }
+
+/* media query to make text fit smaller screensize */
 
 @media only screen and (max-width: 1080px) and (min-width: 823px) {
   #banner h1 {
@@ -171,7 +218,9 @@ header nav .mobile {
   }
 }
 
-@media only screen and (max-width: 823px) and (min-width: 650px) {
+/* media query to make text fit smaller screensize */
+
+@media only screen and (max-width: 823px) and (min-width: 750px) {
   #banner h1 {
     font-size: 25px;
   }
@@ -181,13 +230,15 @@ header nav .mobile {
   }
 
   #banner .container {
-    max-width: 50%;
+    max-width: 80%;
   }
 
   #banner .container h2 {
     padding: 16px 0;
   }
 }
+
+/* banner mobile styling */
 
 @media only screen and (max-width: 750px) {
 
@@ -218,16 +269,13 @@ header nav .mobile {
     padding: 32px 0 24px 0;
   }
 
-  #banner .container .start {
-    background-color: #9c9d9e;
-  }
 }
 
 /* Information styling */
 
 #information {
   display: flex;
-  background-color: #fcfdff;
+  background-color: #F3f5f6;
 }
 
 #information .content {
@@ -246,8 +294,14 @@ header nav .mobile {
   padding: 32px 0 24px 0;
 }
 
+#information .content .textcontainer p {
+  font-family: Taviraj, serif;
+}
+
 #information .content .textcontainer span {
+  font-family: Taviraj, serif;
   padding-top: 24px;
+  font-weight: 700;
 }
 
 .orientation,
@@ -264,7 +318,7 @@ header nav .mobile {
 
 .read {
   padding-top: 8px;
-  color: blue;
+  color: #004489;
   transition: all 400ms ease-out 100ms;
 }
 
@@ -274,11 +328,16 @@ header nav .mobile {
 }
 
 .orientation {
-  border-bottom: 4px double #dbdcdd;
+  background-color: #D3D9DF;
+  border-bottom: 4px double #989898;
+}
+
+.campus {
+  background-color: #A7B4C1;
 }
 
 .lecture {
-  background-color: #dbdcdd;
+  background-color: #778C9F;
 }
 
 #information .textcontainer {
@@ -302,16 +361,16 @@ header nav .mobile {
 }
 
 #information .sidebar {
-  padding: 16px 0;
+  padding: 32px 0;
   width: 40%;
-  border-left: 1px solid #dbdcdd;
+  border-left: 1px solid #989898;
 }
 
 #information .sidebar .textcontainer {
   width: 65%;
 }
 
-
+/* media query to make text fit smaller screensize */
 
 @media only screen and (max-width: 1200px) {
 
@@ -321,6 +380,8 @@ header nav .mobile {
 
 }
 
+/* media query to make text fit smaller screensize */
+
 @media only screen and (max-width: 1130px) and (min-width: 1006px) {
 
   #information .sidebar h2 {
@@ -328,6 +389,8 @@ header nav .mobile {
   }
 
 }
+
+/* media query to make text fit smaller screensize */
 
 @media only screen and (max-width: 1006px) {
 
@@ -337,7 +400,59 @@ header nav .mobile {
 
 }
 
-@media only screen and (max-width: 750px) {
+@media only screen and (max-width: 812px) and (min-width: 609px) {
+
+  #information .imagecontainer {
+    display: none;
+  }
+
+  .orientation {
+    border-bottom: none;
+    background-image: url(../images/information-orientation-mobile.jpg);
+    background-size: cover;
+    margin: 0;
+  }
+
+  .campus {
+    background-image: url(../images/information-campus-mobile.jpg);
+    background-size: cover;
+    margin-top: 2px;
+  }
+
+  .lecture {
+    background-image: url(../images/information-guest-lecture-mobile.jpg);
+    background-size: cover;
+    margin-top: 2px;
+  }
+
+  #information .sidebar {
+    color: #fcfdff;
+    padding: 0;
+  }
+
+  #information .content .textcontainer h1 {
+    font-size: 30px;
+    padding: 0;
+  }
+
+  #information .content .textcontainer {
+    padding: 12px 16px;
+  }
+
+  #information .content p,
+  #information .content span {
+    display: none;
+  }
+
+  #information .content {
+    padding-top: 24px;
+    padding-bottom: 0;
+  }
+}
+
+/* information mobile styling */
+
+@media only screen and (max-width: 609px) {
 
   #information {
     padding: 16px 16px 32px 16px;
@@ -347,21 +462,20 @@ header nav .mobile {
     display: none;
   }
 
+  #information .imagecontainer {
+    display: none;
+  }
+
   .orientation,
   .campus,
   .lecture {
     flex-direction: column;
     border: none;
-    background-color: #fcfdff;
   }
 
   #information .sidebar {
     width: 100%;
     border: none;
-  }
-
-  #information .imagecontainer {
-    display: none;
   }
 
   #information .imagecontainermob{
@@ -382,8 +496,12 @@ header nav .mobile {
   display: flex;
   flex-direction: column;
   padding: 32px 56px;
-  background-color: #e8e8e8;
+  background-color: #D3D9DF;
   align-items: center;
+}
+
+#course .mobile {
+  display: none;
 }
 
 #course .content {
@@ -393,13 +511,15 @@ header nav .mobile {
 
 #course .coursefinder {
   display: flex;
+  flex-wrap: wrap;
+  height: 100%;
 }
 
 .coursecontainer {
   display: flex;
   flex-direction: column;
   padding: 32px 16px;
-  width: 33.33%;
+  width: 30%;
   transition: filter 500ms ease-out 50ms;
 }
 
@@ -418,9 +538,10 @@ header nav .mobile {
 .coursecontainer .textcontainer{
   display: flex;
   flex-direction: column;
-  background-color: #fcfdff;
+  background-color: #F3f5f6;
   padding: 16px 16px 24px 16px;
-  height: 50%;
+  min-height: 126px;
+
 }
 
 .coursecontainer .textcontainer .courses {
@@ -432,6 +553,72 @@ header nav .mobile {
   max-width: 100%;
 }
 
+/* media query to keep course headers on a single line */
+
+@media only screen and (max-width: 1274px) and (min-width: 1133px) {
+  .coursecontainer .textcontainer h2 {
+    font-size: 26px;
+  }
+  .coursecontainer span {
+    font-size: 18px;
+  }
+}
+
+/* media query to keep course headers on a single line */
+
+@media only screen and (max-width: 1133px) and (min-width: 1071px){
+  .coursecontainer .textcontainer h2 {
+    font-size: 24px;
+  }
+  .coursecontainer span {
+    font-size: 16px;
+  }
+}
+
+/* media query to amend courses per line to two */
+
+@media only screen and (max-width: 1071px) {
+  .coursecontainer {
+    width: 45%;
+  }
+}
+
+/* media query to keep course headers on a single line */
+
+@media only screen and (max-width: 886px) and (min-width: 793px) {
+  .coursecontainer .textcontainer h2 {
+    font-size: 26px;
+  }
+  .coursecontainer span {
+    font-size: 18px;
+  }
+}
+
+/* media query to keep course headers on a single line */
+
+@media only screen and (max-width: 793px) and (min-width: 751px){
+  .coursecontainer .textcontainer h2 {
+    font-size: 24px;
+  }
+  .coursecontainer span {
+    font-size: 16px;
+  }
+}
+
+/* media query to amend courses per line to one */
+
+@media only screen and (max-width: 751px) {
+  .coursecontainer {
+    width: 40%;
+  }
+
+  .coursefinder {
+    justify-content: center;
+  }
+}
+
+/* media query to switch to mobile styling */
+
 @media only screen and (max-width: 750px) {
 
   #course {
@@ -441,13 +628,42 @@ header nav .mobile {
     margin: 0 1px;
   }
 
+  #course .content .imagecontainer,
+  #course .content span {
+    display: none;
+  }
+
+  .coursefinder {
+    display: block;
+  }
+
+  .coursecontainer {
+    width: 100%;
+    padding: 0;
+    margin: 8px 0;
+  }
+
+  #course .coursecontainer .textcontainer {
+    padding: 16px 16px 24px 16px;
+    background-color: #dbdcdd;
+    min-height: 0;
+  }
+
+  .coursecontainer .textcontainer h2 {
+    font-weight: 400;
+  }
+
+  #course .title {
+    padding-bottom: 16px;
+  }
+
 }
 /* Thesis styling */
 
 #thesis {
   display: flex;
   flex-direction: column;
-  background-color: #f4f4f4;
+  background-color: #F3f5f6;
 }
 
 #thesis .title {
@@ -467,8 +683,12 @@ video {
   max-width: 100%;
 }
 
-.vid .textcontainer h2{
+.vid .textcontainer h2 {
   padding-bottom: 8px;
+}
+
+.vid .textcontainer p {
+  font-family: Taviraj, serif;
 }
 
 #thesis .sidebar {
@@ -491,13 +711,18 @@ video {
   transition: all 300ms ease 100ms;
 }
 
+
 .element:hover {
   border: 4px solid #fcfdff;
   padding: 12px;
 }
 
 .element.top {
-  background-color: #dbdcdd;
+  background-color: #D3D9DF;
+}
+
+.element.bottom {
+  background-color: #A7B4C1;
 }
 
 #thesis .sidebar .textcontainer {
@@ -517,10 +742,52 @@ video {
   padding: 24px 0 32px 0;
 }
 
+@media only screen and (max-width: 1025px) {
+  #thesis .sidebar .imagecontainer {
+    display: none;
+  }
+
+  .element.top {
+    background-image: url(../images/thesis-fisma.jpg);
+    background-size: cover;
+    color:
+  }
+
+  .element.bottom {
+    background-image: url(../images/thesis-now-and-then.jpg);
+    background-size: cover;
+    height: 32%;
+    color: #fcfdff;
+  }
+
+  #thesis .sidebar {
+    margin-right: 16px;
+    max-width: 30%;
+  }
+
+  #thesis .sidebar .textcontainer {
+    max-width: 100%;
+  }
+}
+
+/* Text removed to fit smaller screen */
+
+@media only screen and (max-width: 811px) {
+  .element p {
+    display: none;
+  }
+
+  #thesis .sidebar .textcontainer h2 {
+    font-size: 20px;
+  }
+}
+
+/* thesis mobile styling */
+
 @media only screen and (max-width: 750px) {
 
   #thesis {
-    background-color: #fcfdff;
+    background-color: #F3f5f6;
   }
 
   #thesis .sidebar {
@@ -547,7 +814,14 @@ footer {
 
 footer nav span {
   padding-left: 8px;
+  transition: color 200ms ease 50ms;
 }
+
+footer nav span:hover {
+  color: #c91808;
+}
+
+/* footer mobile styling */
 
 @media only screen and (max-width: 750px) {
 
